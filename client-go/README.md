@@ -16,6 +16,7 @@ client-go 是一个调用 kubernetes 集群资源对象 API 的客户端，即�
 
 + discovery：通过 Kubernetes API 进行服务发现；
 + dynamic：对任意 Kubernetes 对象执行通用操作的动态 client；
++ informers：Kubernetes 内置对象的 Informer 定义，
 + kubernetes： 访问 Kubernetes API 的一系列的 clientset；
 + rest：访问 Kubernetes API 的 Rest 库，是 dynamic 和 clientset 的基础；
 + transport：启动连接和鉴权 auth；
