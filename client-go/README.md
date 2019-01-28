@@ -1,4 +1,4 @@
-# Kubernetes 的 client-go 库介绍
+# Kubernetes client-go 库介绍和源码解析
 
 client-go 项目地址：https://github.com/kubernetes/client-go
 
@@ -123,3 +123,4 @@ github 上关于 client-go 的设计有一副[概览图](https://github.com/kube
 
 ## 参考
 1. [Kubernetes的client-go库介绍](https://www.jianshu.com/p/d17f70369c35)
+2. [client-go under the hood](https://github.com/kubernetes/sample-controller/blob/master/docs/controller-client-go.md)
