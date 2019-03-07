@@ -2,6 +2,8 @@
 
 client-go 项目地址：https://github.com/kubernetes/client-go
 
+本文档源码分析基于 kubernetes-1.13.5-beta.0 版本。
+
 ## 基本介绍
 
 Kubernetes 官方从 2016 年 8 月份开始，将 Kubernetes 资源操作相关的核心源码抽取出来，独立出来一个项目 `client-go`，作为官方提供的 Go client。
@@ -89,9 +91,9 @@ type ServiceInterface interface {
 
 ## client-go 的设计思想
 
-github 上关于 client-go 的设计有一副[概览图](https://github.com/kubernetes/sample-controller/blob/master/docs/controller-client-go.md)如下：
+client-go/tool/cache/ 和自定义 Controller 的控制流（[来源](https://itnext.io/how-to-create-a-kubernetes-custom-controller-using-client-go-f36a7a7536cc)）：
 
-![](image/2019-01-25-23-48-04.png)
+![](image/2019-03-06-18-42-40.png)
 
 上图相对较为复杂，有很多细节，我自己结合源码的理解如下：
 
@@ -124,3 +126,9 @@ github 上关于 client-go 的设计有一副[概览图](https://github.com/kube
 ## 参考
 1. [Kubernetes的client-go库介绍](https://www.jianshu.com/p/d17f70369c35)
 2. [client-go under the hood](https://github.com/kubernetes/sample-controller/blob/master/docs/controller-client-go.md)
+3. [sample-controller](https://github.com/kubernetes/sample-controller)
+4. [kubebuilder 文档](https://book.kubebuilder.io/)
+5. [deployment_controller](https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/deployment/deployment_controller.go)
+6. [Writing Controllers](https://github.com/kubernetes/community/blob/master/contributors/devel/controllers.md)
+7. [controller-runtime 实例](https://github.com/googlecloudrobotics/core/blob/master/src/go/pkg/controller/chartassignment/controller.go)
+8. [etcd-operator](https://github.com/coreos/etcd-operator)
