@@ -1,3 +1,3 @@
 # kubernetes-dev-docs
 
-Kuberntes 开发文档
+Kubernetes 源码解析和实践
